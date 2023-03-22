@@ -1,4 +1,4 @@
-type MyReadonly<T> = {
+export type MyReadonly<T> = {
   readonly [key in keyof T]: T[key]
 }
 
@@ -14,5 +14,5 @@ const todo: MyReadonly<Todo> = {
   description: "foobar"
 }
 
-todo.title = "Hello" // Error: cannot reassign a readonly property
-todo.description = "barFoo" // Error: cannot reassign a readonly property
+// todo.title = "Hello" // Error: cannot reassign a readonly property
+// todo.description = "barFoo" // Error: cannot reassign a readonly property

@@ -1,4 +1,4 @@
-type TupleToObject<T extends ReadonlyArray<any>> = {
+export type TupleToObject<T extends ReadonlyArray<any>> = {
   // [key in T[number]]: key
   [key in T[number]]: key
 }
